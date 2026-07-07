@@ -1,0 +1,31 @@
+name: Publish package to the Maven Central Repository
+on:
+    push:
+        tags:
+            - 'v*'
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Set up JDK
+              uses: actions/setup-java@v4
+              with:
+                  distribution: 'temurin'
+                  java-version: '8'
+                  server-id: 'central'
+                  server-username: SERVER_USERNAME
+                  server-password: SERVER_PASSWORD
+                  gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+                  gpg-passphrase: MAVEN_GPG_PASSPHRASE
+                  cache: 'maven'
+
+            - name: Build and Deploy
+              run: |
+                  mvn -B clean deploy -f idaas-java-akless-aws-adapter/pom.xml
+              env:
+                  SERVER_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+                  SERVER_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+                  MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}

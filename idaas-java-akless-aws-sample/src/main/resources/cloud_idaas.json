@@ -1,0 +1,14 @@
+{
+    "idaasInstanceId": "idaas_xxx",
+    "clientId": "app_xxx",
+    "issuer": "https://xxx.aliyunidaas.com/api/v2/iauths_system/oauth2",
+    "tokenEndpoint": "https://xxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token",
+    "scope": "urn:cloud:idaas:pam|.all",
+    "openApiEndpoint": "https://eiam.xxx.aliyuncs.com",
+    "developerApiEndpoint": "https://eiam-developerapi.xxx.aliyuncs.com",
+    "authnConfiguration": {
+        "authenticationSubject": "CLIENT",
+        "authnMethod": "CLIENT_SECRET_POST",
+        "clientSecretEnvVarName": "IDAAS_CLIENT_SECRET"
+    }
+}

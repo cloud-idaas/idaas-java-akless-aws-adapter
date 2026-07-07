@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.cloud-idaas</groupId>
+        <artifactId>idaas-parent-pom</artifactId>
+        <version>0.0.2</version>
+        <relativePath/>
+    </parent>
+
+    <artifactId>idaas-java-akless-aws-adapter</artifactId>
+    <version>0.0.1-beta</version>
+    <packaging>jar</packaging>
+
+    <name>idaas-java-akless-aws-adapter</name>
+    <description>AWS IDaaS SDK ADAPTER</description>
+    <url>https://github.com/cloud-idaas/idaas-java-akless-aws-adapter</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Cloud IDaaS</name>
+            <email>cloudidaas@list.alibaba-inc.com</email>
+            <url>https://github.com/cloud-idaas</url>
+        </developer>
+    </developers>
+    <scm>
+        <url>https://github.com/cloud-idaas/idaas-java-akless-aws-adapter</url>
+        <connection>https://github.com/cloud-idaas/idaas-java-akless-aws-adapter.git</connection>
+        <developerConnection>https://github.com/cloud-idaas</developerConnection>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>auth</artifactId>
+            <version>2.25.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.cloud-idaas</groupId>
+            <artifactId>idaas-java-core-sdk</artifactId>
+            <version>0.0.6-beta</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>
